@@ -1,0 +1,127 @@
+/* General reset */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #ffffff;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  transition: background 0.5s ease-in-out;
+  overflow: hidden;
+}
+
+/* App container styling */
+.app-container {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  border-radius: 20px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px); /* Glassmorphism effect */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  width: 90%;
+  max-width: 400px;
+  animation: slideIn 1s ease-out;
+}
+
+/* Weather Info Styling */
+.weather-display h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.weather-display p {
+  font-size: 1.2rem;
+  margin: 0.3rem 0;
+}
+
+/* Search bar styling */
+.search-bar {
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.search-bar input {
+  padding: 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.2);
+  outline: none;
+  color: #fff;
+  text-align: center;
+  width: 70%;
+}
+
+.search-bar input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.search-bar button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #ff9966, #ff5e62);
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.search-bar button:hover {
+  transform: scale(1.1);
+}
+
+/* Dynamic backgrounds */
+body.sunny {
+  background: linear-gradient(to top, #f7b733, #fc4a1a);
+}
+
+body.rainy {
+  background: linear-gradient(to top, #4e54c8, #8f94fb);
+}
+
+body.cloudy {
+  background: linear-gradient(to top, #bdc3c7, #2c3e50);
+}
+
+/* Animations */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .app-container {
+    width: 95%;
+    padding: 1.5rem;
+  }
+
+  .weather-display h1 {
+    font-size: 2rem;
+  }
+
+  .weather-display p {
+    font-size: 1rem;
+  }
+}
